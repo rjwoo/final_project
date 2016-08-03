@@ -27,6 +27,8 @@ gem 'cocoon'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'simple_form'
 gem "font-awesome-rails"
+gem "rails-erd"
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
