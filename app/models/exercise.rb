@@ -1,4 +1,6 @@
 class Exercise < ActiveRecord::Base
-  belongs_to :program
+  has_many :exercise_logs, dependent: :destroy
+
   belongs_to :exercise_option
+  belongs_to :program
 end
