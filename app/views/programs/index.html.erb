@@ -1,0 +1,10 @@
+<h1>Your Programs</h1>
+
+<% @programs.each do |program| %>
+  <div>
+    <h2><%= link_to program.title, program_path(program) %></h2>
+    <hr>
+  </div>
+<% end %>
+
+<%= link_to "Add New Workout", new_program_path %>

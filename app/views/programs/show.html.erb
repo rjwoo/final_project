@@ -1,0 +1,8 @@
+<div>
+  <h1><%= @program.title %></h1>
+  <p><%= link_to "Add Another Workout", new_program_path(@program) %> |
+     <%= link_to "Edit Program Name", edit_program_path(@program) %> |
+     <%= link_to "Delete Entire Program", @program, method: :delete, data: {confirm: "Are you sure?"} %>
+  </p>
+  <hr>
+</div>
