@@ -5,8 +5,8 @@ class CreateExerciseLogs < ActiveRecord::Migration
       t.float :weight
       t.integer :sets
       t.float :volume
-      t.references :program, index: true, foreign_key: true
       t.references :exercise, index: true, foreign_key: true
+      t.references :exercise_option, index: true, foreign_key: true
 
       t.timestamps null: false
     end

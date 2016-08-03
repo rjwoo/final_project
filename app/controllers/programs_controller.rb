@@ -4,13 +4,10 @@ class ProgramsController < ApplicationController
 
   def new
     @program = Program.new
-    @exercise = Exercise.new
   end
 
   def create
     @program = Program.new program_params
-    @exercise = Exercise.new
-    @exercise = @program.exercise
     if @program.save
       redirect_to program_path(@program)
     else
@@ -23,7 +20,6 @@ class ProgramsController < ApplicationController
   end
 
   def show
-    @exercises = @program.exercises
   end
 
   def edit
@@ -49,7 +45,7 @@ class ProgramsController < ApplicationController
   end
 
   def program_params
-    params.require(:program).permit(:title, :exercise_id)
+    params.require(:program).permit(:title)
   end
 
 end

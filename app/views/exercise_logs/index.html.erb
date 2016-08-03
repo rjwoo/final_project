@@ -1,0 +1,7 @@
+<h1><%= @program.title %></h1>
+<% @exercise_logs.each do |f| %>
+  <h3><%= f.exercise.name if f.exercise %></h3>
+  Reps: <%= f.reps %>
+  Weight: <%= f.weight %>lbs
+  <hr>
+<% end %>

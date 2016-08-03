@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160803035535) do
+ActiveRecord::Schema.define(version: 20160803232757) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,20 +21,31 @@ ActiveRecord::Schema.define(version: 20160803035535) do
     t.float    "weight"
     t.integer  "sets"
     t.float    "volume"
-    t.integer  "program_id"
     t.integer  "exercise_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.integer  "exercise_option_id"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
   end
 
   add_index "exercise_logs", ["exercise_id"], name: "index_exercise_logs_on_exercise_id", using: :btree
-  add_index "exercise_logs", ["program_id"], name: "index_exercise_logs_on_program_id", using: :btree
+  add_index "exercise_logs", ["exercise_option_id"], name: "index_exercise_logs_on_exercise_option_id", using: :btree
 
-  create_table "exercises", force: :cascade do |t|
+  create_table "exercise_options", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "exercises", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "program_id"
+    t.integer  "exercise_option_id"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+  end
+
+  add_index "exercises", ["exercise_option_id"], name: "index_exercises_on_exercise_option_id", using: :btree
+  add_index "exercises", ["program_id"], name: "index_exercises_on_program_id", using: :btree
 
   create_table "programs", force: :cascade do |t|
     t.string   "title"
@@ -42,6 +53,8 @@ ActiveRecord::Schema.define(version: 20160803035535) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "exercise_logs", "exercise_options"
   add_foreign_key "exercise_logs", "exercises"
-  add_foreign_key "exercise_logs", "programs"
+  add_foreign_key "exercises", "exercise_options"
+  add_foreign_key "exercises", "programs"
 end

@@ -1,11 +1,5 @@
-<%= form_for @program do |f| %>
-  <%#= f.input :title %>
-
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-  <div>
-    <%= collection_select( :name, :exercise_id, Exercise.all, :id, :name, {}, { :multiple => false }) %>
-  </div>
+<%= simple_form_for @program do |f| %>
+  <%= f.input %>
   <hr>
   <%= f.button :submit %>
 <% end %>
