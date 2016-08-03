@@ -5,13 +5,13 @@ one:
   weight: 1.5
   sets: 1
   volume: 1.5
-  program_id: 
   exercise_id: 
+  exercise_option_id: 
 
 two:
   reps: 1
   weight: 1.5
   sets: 1
   volume: 1.5
-  program_id: 
   exercise_id: 
+  exercise_option_id: 
