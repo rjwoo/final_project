@@ -1,0 +1,11 @@
+<% @exercises.each do |exercise| %>
+  <h1><%= exercise.exercise_option.name %></h1>
+  <% @exercise_log = ExerciseLog.new %>
+  <%= simple_form_for @exercise_log, url: exercise_exercise_logs_path(exercise) do |f| %>
+    <%= f.input :sets %>
+    <%= f.input :reps %>
+    <%= f.input :weight %>
+    <%= f.button :submit, "Completed" %>
+    <hr>
+  <% end %>
+<% end %>

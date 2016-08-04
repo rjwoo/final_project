@@ -9,6 +9,6 @@
     <h4><%= exercise.exercise_option.name %></h4>
   <% end %>
   <div>
-    <%= link_to "Start Workout", new_program_exercise_log_path(@program) %>
+    <%= link_to "Start Workout", program_exercises_path(@program, @exercises) %>
   </div>
 </div>
