@@ -7,12 +7,14 @@ class ExerciseLogsController < ApplicationController
   end
 
   def create
-    byebug
     @program = Program.find params[:program_id]
     @exercises = @program.exercises
     @exercise_log = ExerciseLog.new exercise_logs_params
-    @exercise_log.save
-    redirect_to programs_path
+    if @exercise_log.save
+      redirect_to programs_path, notice: "Exercise Completed!"
+    else
+      render :new
+    end
   end
 
   private

@@ -1,11 +1,13 @@
 <h1>New Log</h1>
 <% @exercises.each do |exercise| %>
-<h3><%= exercise.exercise_option.name %></h3>
+  <h4><%= exercise.exercise_option.name %></h4>
+
   <%= simple_form_for([@exercise, @exercise_log], url: program_exercise_logs_path(@program, @exercise)) do |f| %>
     <%= f.input :sets %>
     <%= f.input :reps %>
     <%= f.input :weight %>
     <hr>
-    <%= f.button :submit %>
-    <% end %>
+    <%= f.button :submit, "Completed" %>
+  <% end %>
 <% end %>
+<%#= link_to "Finish Workout", redirect_to programs_path %>

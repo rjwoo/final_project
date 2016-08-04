@@ -3,4 +3,5 @@ class Exercise < ActiveRecord::Base
 
   belongs_to :exercise_option
   belongs_to :program
+
 end
