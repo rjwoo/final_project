@@ -1,0 +1,8 @@
+<%= simple_form_for([@program, @exercise], url: program_exercises_path(@program)) do |f| %>
+  <div>
+    <%= f.association :exercise_option, include_blank: false %>
+  </div>
+  <div>
+    <%= f.button :submit, "Add" %>
+  </div>
+<% end %>

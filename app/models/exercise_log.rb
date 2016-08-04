@@ -4,4 +4,5 @@ class ExerciseLog < ActiveRecord::Base
 
   validates :reps, presence: true
   validates :weight, presence: true
+  validates :sets, presence: true
 end
