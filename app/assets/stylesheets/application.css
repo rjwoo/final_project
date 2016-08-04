@@ -13,3 +13,19 @@
  *= require_tree .
  *= require_self
  */
+
+ .flash-notice {
+  width: 100%;
+  height: 40px;
+  background-color: green;
+}
+
+.flash-alert {
+  width: 100%;
+  height: 40px;
+  background-color: red;
+}
+
+.due_date {
+  font-style: italic;
+}
