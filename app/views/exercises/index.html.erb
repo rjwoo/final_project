@@ -1,0 +1,8 @@
+<div id="exercises-form">
+  <% @exercises.each do |exercise| %>
+    <% program = exercise.program  %>
+    <div class="exercises" id="<%= dom_id(program) %>-<%= dom_id(exercise) %>">
+      <%= render "exercise_log", exercise: exercise %>
+    </div>
+  <% end %>
+</div>

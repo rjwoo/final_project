@@ -4,7 +4,10 @@ Rails.application.routes.draw do
 
   resources :programs do
     resources :exercises
-    resources :exercise_logs, only: [:new, :create]
   end
+
+  resources :exercises, only: [] do
+    resources :exercise_logs, only: [:new, :create]
+  end 
 
 end

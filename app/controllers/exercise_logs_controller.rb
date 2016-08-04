@@ -1,19 +1,22 @@
 class ExerciseLogsController < ApplicationController
 
   def new
-    @program = Program.find params[:program_id]
     @exercises = @program.exercises
     @exercise_log = ExerciseLog.new
   end
 
   def create
-    @program = Program.find params[:program_id]
-    @exercises = @program.exercises
+    @exercise = Exercise.find params[:exercise_id]
     @exercise_log = ExerciseLog.new exercise_logs_params
-    if @exercise_log.save
-      redirect_to programs_path, notice: "Exercise Completed!"
-    else
-      render :new
+    @exercise_log.exercise = @exercise
+    respond_to do |format|
+      if @exercise_log.save
+        format.html { redirect_to programs_path, notice: "Exercise Completed!" }
+        format.js   { render :create_success }
+      else
+        format.html { render "exercises/index" }
+        format.js   { render :create_failure }
+      end
     end
   end
 

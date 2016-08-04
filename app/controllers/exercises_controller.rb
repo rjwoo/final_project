@@ -23,7 +23,7 @@ class ExercisesController < ApplicationController
 
   def index
     @program = Program.find params[:program_id]
-    @exercises = Exercise.all
+    @exercises = @program.exercises
   end
 
   private
