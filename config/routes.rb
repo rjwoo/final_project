@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   end
 
   resources :exercises, only: [] do
-    resources :exercise_logs, only: [:new, :create]
-  end 
+    resources :exercise_logs, only: [:new, :create, :show]
+  end
 
 end

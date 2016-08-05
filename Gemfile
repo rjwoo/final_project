@@ -28,6 +28,7 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'simple_form'
 gem "font-awesome-rails"
 gem "rails-erd"
+gem 'chart-js-rails'
 
 
 # Use ActiveModel has_secure_password
@@ -46,7 +47,6 @@ end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', '~> 2.0'
 
   gem 'web-console', '~> 2.0'
   gem "interactive_editor"

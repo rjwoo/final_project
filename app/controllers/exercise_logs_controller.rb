@@ -20,6 +20,10 @@ class ExerciseLogsController < ApplicationController
     end
   end
 
+  def show
+    @exercise_log = ExerciseLog.find params[:id]
+  end
+
   private
 
   def exercise_logs_params

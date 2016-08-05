@@ -18,6 +18,7 @@ class ExercisesController < ApplicationController
 
   def show
     @program = Program.find params[:program_id]
+    @exercise_logs = @program.exercises.map{ |exercise| exercise.exercise_log }
     @exercise = Exercise.find params[:id]
   end
 
