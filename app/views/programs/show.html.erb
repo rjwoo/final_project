@@ -3,13 +3,21 @@
   <p><%= link_to "Add Exercises", new_program_exercise_path(@program) %> |
      <%= link_to "Delete Entire Workout", @program, method: :delete, data: {confirm: "Are you sure?"} %>
   </p>
-  <hr>
-  <% @exercises = @program.exercises %>
-  <% @exercises.each do |exercise| %>
-    <h4><%= exercise.exercise_option.name %></h4>
-  <% end %>
   <div>
     <%= link_to "Start Workout", program_exercises_path(@program, @exercises) %>
   </div>
   <hr>
+
+  <% @exercises = @program.exercises %>
+  <% @exercises.each do |exercise| %>
+    <h4><%= exercise.exercise_option.name %></h4>
+    <div id="weight<%= dom_id(exercise) %>" value="<%= exercise.weight_lifted %>"></div>
+    <div id="date<%= dom_id(exercise) %>" value="<%= exercise.exercise_date %>"></div>
+
+      <%= render "weight" %>
+
+    </div>
+  <% end %>
+
+
 </div>
