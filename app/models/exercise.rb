@@ -20,4 +20,12 @@ class Exercise < ActiveRecord::Base
     weight
   end
 
+  def volume_lifted
+    volume = []
+    self.exercise_logs.each do |x|
+      volume << x.volume
+    end
+    volume
+  end
+
 end

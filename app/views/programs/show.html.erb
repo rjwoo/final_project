@@ -12,10 +12,12 @@
   <% @exercises.each do |exercise| %>
     <h4><%= exercise.exercise_option.name %></h4>
     <div id="weight<%= dom_id(exercise) %>" value="<%= exercise.weight_lifted %>"></div>
+    <!-- <div id="volume<%#= dom_id(exercise) %>" value="<%= exercise.weight_lifted %>"></div> -->
     <div id="date<%= dom_id(exercise) %>" value="<%= exercise.exercise_date %>"></div>
-    <canvas id="myChart<%= dom_id(exercise) %>" width="200" height="50"></canvas>
+    <canvas id="myChart<%= dom_id(exercise) %>" width="200" height="75"></canvas>
 
       <%= render "weight", id: exercise.id %>
+      <%#= render "volume", id: exercise.id %>
 
     </div>
   <% end %>
