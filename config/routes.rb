@@ -10,4 +10,9 @@ Rails.application.routes.draw do
     resources :exercise_logs, only: [:new, :create, :show]
   end
 
+  resources :users, only: [:new, :create]
+
+  resources :sessions, only: [:new, :create] do
+    delete :destroy, on: :collection
+  end
 end

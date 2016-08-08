@@ -1,4 +1,5 @@
 class ExerciseLogsController < ApplicationController
+  before_action :authenticate_user!
 
   def new
     @exercises = @program.exercises
