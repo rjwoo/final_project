@@ -1,5 +1,5 @@
 <div class="navbar">
-  <%= link_to "Your Workouts", root_path %> |
+  <%= link_to "Your Workouts", programs_path %> |
   <%= link_to "Add New Workout", new_program_path %> |
   <% if user_signed_in? %>
     <%= link_to "Logout", sessions_path, method: :delete, data: {confirm: "Are you sure you want to log out?"} %>

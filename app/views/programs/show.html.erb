@@ -12,10 +12,14 @@
   <% @exercises.each do |exercise| %>
     <h4><%= exercise.exercise_option.name %></h4>
 
-    <ul class="nav">
-      <li class="active"><a href=".weight#<%= dom_id(exercise) %>" data-toggle="tab" aria-expanded="false"><h5>Graph by Weight</h5></a></li>
-      <li class="active"><a href=".volume#<%= dom_id(exercise) %>" data-toggle="tab" aria-expanded="false"><h5>Graph by Volume</h5></a></li>
-    </ul>
+    <%= link_to "Progress by Weight", graph: :weight %>
+    <%= link_to "Progress by Volume", graph: :volume %>
+
+    <% if params[:graph] == "weight" %>
+      <%= render "weight", id: exercise.id %>
+    <% else %>
+      <%= render "volume", id: exercise.id %>
+    <% end %>
 
     <div id="weight<%= dom_id(exercise) %>" value="<%= exercise.weight_lifted %>"></div>
     <div id="volume<%= dom_id(exercise) %>" value="<%= exercise.volume_lifted %>"></div>
@@ -25,11 +29,11 @@
       <canvas id="myChart<%= dom_id(exercise) %>" width="200" height="55"></canvas>
 
       <div class="weight" id="<%= dom_id(exercise) %>">
-        <%= render "weight", id: exercise.id %>
+        <%#= render "weight", id: exercise.id %>
       </div>
 
       <div class="volume" id="<%= dom_id(exercise) %>">
-        <%= render "volume", id: exercise.id %>
+        <%#= render "volume", id: exercise.id %>
       </div>
 
     </div>

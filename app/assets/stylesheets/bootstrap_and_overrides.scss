@@ -1,0 +1,57 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body {
+  background-color: black;
+}
+
+.header {
+  text-align: center;
+  font-family: 'Black Ops One', cursive;
+  color: #80bfd8;
+}
+
+
+// FORMS
+
+
+
+#sign-in-header {
+  text-align: center;
+  font-family: 'Black Ops One', cursive;
+  color: #80bfd8;
+  margin-bottom: 50px;
+}
+
+form > div:nth-child(5) > input {
+  color: #333;
+  width: 30%;
+  background-color: #80bfd8;
+  margin-left: 35%;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: inline-block;
+}
+
+#email {
+  width: 30%;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+#password {
+  width: 30%;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.form-font {
+  color: #80bfd8;
+}
+
+// FONTS
+.karla {
+  font-family: 'Karla', sans-serif;
+}

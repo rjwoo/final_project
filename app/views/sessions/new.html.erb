@@ -1,16 +1,14 @@
-<div class="forms">
-  <h1>Sign In</h1>
+<h1 id="sign-in-header">SIGN IN</h1>
 
+<div class="sign-in-container">
   <%= form_tag sessions_path do %>
-    <div class="form-group">
-      <%= label_tag :email, nil, class: "control-label" %>
-      <%= email_field_tag :email, nil, class: "form-control" %>
+    <div class="form-font">
+      <%= email_field_tag :email, nil, class: "form-control", placeholder: "Email" %>
+    </div>
+    <div class="form-font">
+      <%= password_field_tag :password, nil, class: "form-control", placeholder: "Password" %>
     </div>
     <div>
-      <%= label_tag :password, nil, class: "control-label" %>
-      <%= password_field_tag :password, nil, class: "form-control" %>
-    </div>
-    <div class="login">
       <%= submit_tag "Log In", class: "btn btn-primary" %>
     </div>
   <% end %>

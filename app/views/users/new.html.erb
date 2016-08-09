@@ -1,10 +1,13 @@
-<h1>Sign Up</h1>
+<h1 class="header">SIGN UP</h1>
 
 <%= simple_form_for @user do |f|%>
+  
     <%= f.input :first_name %>
     <%= f.input :last_name %>
     <%= f.input :email %>
     <%= f.input :password %>
     <%= f.input :password_confirmation %>
-  <%= f.button :submit %>
+  <div>
+    <%= f.button :submit %>
+  </div>
 <% end %>
