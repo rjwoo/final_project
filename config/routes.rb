@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root "sessions#new"
+  root "programs#index"
 
   resources :programs do
     resources :exercises

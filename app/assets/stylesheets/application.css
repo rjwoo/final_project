@@ -17,15 +17,17 @@
 
 
  .flash-notice {
-  width: 100%;
+  width: 80%;
   height: 40px;
-  background-color: green;
+  background-color: #80bfd8;
+  margin: auto;
 }
 
 .flash-alert {
-  width: 100%;
+  width: 80%;
   height: 40px;
   background-color: red;
+  margin: auto;
 }
 
 .due_date {

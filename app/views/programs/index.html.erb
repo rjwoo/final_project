@@ -1,12 +1,13 @@
-<h1 class="header">Your Programs</h1>
+<div class="program-container">
+  <h1 class="index-header">Your Programs</h1>
 
-<% @programs.each do |program| %>
-  <div>
-    <h2><%= link_to program.title, program_path(program) %></h2>
-    <hr>
-  </div>
-<% end %>
+  <% @programs.each do |program| %>
+    <div class="day">
+      <h2><%= link_to program.title, program_path(program) %></h2>
+      <div style="width: 100%; height: 6px; background: #ebe8e7; overflow: hidden;"></div>
+    </div>
+  <% end %>
 
-<div class="karla">
-  <%= link_to "Add New Workout", new_program_path %>
+  <div class="add-button" style="text-align: center"><button class="button button-royal button-circle button-giant"><a href="http://localhost:3000/programs/new"><i class="fa fa-plus"></i></a></button></div>
+
 </div>

@@ -1,5 +1,7 @@
-<%= simple_form_for @program do |f| %>
-  <%= f.input :title %>
+<%= form_tag @program do %>
+  <%= text_field_tag :title, nil, class: "title", placeholder: "Title" %>
   <hr>
-  <%= f.button :submit %>
+  <div class="sign">
+    <%= submit_tag "Create New Program", class: "button btn btn-default wide" %>
+  </div>
 <% end %>
