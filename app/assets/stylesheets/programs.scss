@@ -1,3 +1,21 @@
-// Place all the styles related to the programs controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.button-royal,
+.button-royal-flat {
+  background-color: #7b72e9;
+  border-color: #7b72e9;
+  color: white; }
+  .button-royal:visited,
+  .button-royal-flat:visited {
+    color: white; }
+  .button-royal:hover, .button-royal:focus,
+  .button-royal-flat:hover,
+  .button-royal-flat:focus {
+    background-color: #a49ef0;
+    border-color: #a49ef0;
+    color: white; }
+  .button-royal:active, .button-royal.active, .button-royal.is-active,
+  .button-royal-flat:active,
+  .button-royal-flat.active,
+  .button-royal-flat.is-active {
+    background-color: #827ae1;
+    border-color: #827ae1;
+    color: #5246e2; }

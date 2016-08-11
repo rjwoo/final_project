@@ -1,13 +1,22 @@
-<h1 class="header">SIGN UP</h1>
-
-<%= simple_form_for @user do |f|%>
-  
-    <%= f.input :first_name %>
-    <%= f.input :last_name %>
-    <%= f.input :email %>
-    <%= f.input :password %>
-    <%= f.input :password_confirmation %>
-  <div>
-    <%= f.button :submit %>
+<div class="container">
+  <div class="row colored">
+    <div id="contentdiv" class="contcustom">
+      <span><img src="/assets/weightlifting.png"</span>
+      <h2 class="header">SIGN UP</h2>
+      <div class="istok-web">
+        <%= simple_form_for @user do |f|%>
+          <div id="form-text">
+            <%= f.input :first_name, placeholder: "First Name", label: false %>
+            <%= f.input :last_name, placeholder: "Last Name", label: false %>
+            <%= f.input :email, placeholder: "Email", label: false %>
+            <%= f.input :password, placeholder: "Password", label: false %>
+            <%= f.input :password_confirmation, placeholder: "Confirm Password", label: false %>
+          </div>
+          <div>
+            <%= f.button :submit, class: "button btn btn-default wide" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
   </div>
-<% end %>
+</div>

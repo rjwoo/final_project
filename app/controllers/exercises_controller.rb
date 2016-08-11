@@ -1,6 +1,6 @@
 class ExercisesController < ApplicationController
   before_action :authenticate_user!
-  
+
   def new
     @program = Program.find params[:program_id]
     @exercise = Exercise.new

@@ -2,8 +2,17 @@
 <html>
 <head>
   <link href='https://fonts.googleapis.com/css?family=Black+Ops+One' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Karla' rel='stylesheet' type='text/css'>
-  <title>FinalProject</title>
+  <link href='https://fonts.googleapis.com/css?family=Istok+Web' rel='stylesheet' type='text/css'>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/buttons.css">
+
+  <title>Pump It</title>
+
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -12,19 +21,21 @@
 </head>
 <body>
 
-    <div class="navbar">
-      <%= render "/layouts/navbar" %>
-    </div>
+  <div class="navbar">
+    <%= render "/layouts/navbar" %>
+  </div>
 
-    <div>
-      <% if flash[:notice] %>
-        <div class="flash-notice"><%= flash[:notice] %></div>
-      <% elsif flash[:alert] %>
-        <div class="flash-alert"><%= flash[:alert] %></div>
-      <% end %>
-    </div>
+  <div>
+    <% if flash[:notice] %>
+      <div class="flash-notice"><%= flash[:notice] %></div>
+    <% elsif flash[:alert] %>
+      <div class="flash-alert"><%= flash[:alert] %></div>
+    <% end %>
+  </div>
 
-      <%= yield %>
-
+  <div class="container">
+    <%= yield %>
+  </div>
+  
 </body>
 </html>

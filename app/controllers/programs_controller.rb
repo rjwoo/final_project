@@ -1,13 +1,14 @@
 class ProgramsController < ApplicationController
   before_action :find_program, only: [:show, :edit, :update, :destroy]
   before_action :program_params, only: [:create, :update]
-  before_action :authenticate_user!, except: [:index, :show]
+  before_action :authenticate_user!
 
   def new
     @program = Program.new
   end
 
   def create
+    puts "===================> #{params}"
     @program = Program.new program_params
     if @program.save
       redirect_to program_path(@program)
