@@ -17,17 +17,27 @@
 
 
  .flash-notice {
-  width: 80%;
+  width: 60%;
   height: 40px;
-  background-color: #80bfd8;
+  background-color: #dbdfe0;
+  border-left: 12px solid #282c3c;
   margin: auto;
+  text-align: center;
+  line-height: 40px;
+  font-family: 'Arimo', sans-serif;
+  border-radius: 5px;
 }
 
 .flash-alert {
-  width: 80%;
+  width: 60%;
   height: 40px;
-  background-color: red;
+  background-color: #fc5555;
+  border-left: 12px solid #820505;
   margin: auto;
+  text-align: center;
+  line-height: 40px;
+  font-family: 'Arimo', sans-serif;
+  border-radius: 5px;
 }
 
 .due_date {

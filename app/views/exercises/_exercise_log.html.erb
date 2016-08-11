@@ -1,12 +1,19 @@
-<h1><%= exercise.exercise_option.name %></h1>
+<div class="row colored">
+  <div id="contentdiv" class="contcustom">
+    <div class="istok-web-show">
+      <h2><%= exercise.exercise_option.name %></h2>
 
-<% @exercise_log = ExerciseLog.new %>
-<%= simple_form_for @exercise_log, url: exercise_exercise_logs_path(exercise), remote: true do |f| %>
+      <% @exercise_log = ExerciseLog.new %>
+      <%= simple_form_for @exercise_log, url: exercise_exercise_logs_path(exercise), remote: true do |f| %>
+        <div id="form-text">
+          <%= f.input :sets, as: :string, label: false, placeholder: "Sets" %>
+          <%= f.input :reps, as: :string, label: false, placeholder: "Reps" %>
+          <%= f.input :weight, as: :string, label: false, placeholder: "Weigh(lbs.)" %>
 
-    <%= f.input :sets, as: :string %>
-    <%= f.input :reps, as: :string %>
-    <%= f.input :weight, as: :string %>
-    <%= f.button :submit, "Completed" %>
-    <hr>
-
-<% end %>
+          <%= f.button :submit, "Completed", class: "button btn btn-default wide" %>
+          <hr>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

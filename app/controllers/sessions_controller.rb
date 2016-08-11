@@ -9,7 +9,8 @@ class SessionsController < ApplicationController
       session[:user_id] = @user.id
       redirect_to programs_path, notice: "Signed In!"
     else
-      render :new, alert: "Wrong credentials"
+      flash[:alert] = "Incorrect Email or Password, please try again."
+      render :new
     end
   end
 

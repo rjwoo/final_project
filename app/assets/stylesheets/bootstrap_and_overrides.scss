@@ -250,6 +250,30 @@ body > div.program-container > h2 {
   padding: 10px 20px 10px 20px;
 }
 
+#form-text > input {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  font-weight: 700;
+  color: #80bfd8;
+}
+
+#finish {
+  width: 200px;
+  margin: auto;
+  display: block;
+}
+
+#finish > a {
+  align-items: center;
+}
+
+a img {
+display: block;
+margin: 0 auto;
+border: none;
+bottom: 10px;
+}
+
 // #program-show > div > h2 > span > a {
 //   linear-gradient: (#282C45, #282C3C);
 // }
@@ -660,7 +684,7 @@ body > div.program-container > h2 {
   .button-circle.button-giant,
   .button-box.button-giant,
   .button-square.button-giant {
-    width: 70px; }
+    width: 90px; }
   .button-circle.button-jumbo,
   .button-box.button-jumbo,
   .button-square.button-jumbo {
@@ -1014,7 +1038,7 @@ body > div.program-container > h2 {
     background: linear-gradient(top, #80bfd8, #80bfd8); }
   .button-raised.button-primary:active, .button-raised.button-primary.active, .button-raised.button-primary.is-active {
     border-color: #80bfd8;
-    background: #2798eb; }
+    background: #282c3c; }
 .button-raised.button-plain {
   border-color: #f2f2f2;
   background: -webkit-gradient(linear, left top, left bottom, from(#80bfd8), to(#80bfd8));
@@ -1775,8 +1799,8 @@ body > div.program-container > h2 {
 * (ex. .button-large, .button-small, etc.)
 */
 .button-giant {
-  font-size: 28px;
-  height: 70px;
+  font-size: 45px;
+  height: 90px;
   line-height: 70px;
   padding: 0 70px; }
 

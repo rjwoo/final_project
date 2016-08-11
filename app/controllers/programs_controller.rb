@@ -8,12 +8,11 @@ class ProgramsController < ApplicationController
   end
 
   def create
-    puts "===================> #{params}"
     @program = Program.new program_params
     if @program.save
-      redirect_to program_path(@program)
+      redirect_to program_path(@program), notice: "Successfully Created New Workout"
     else
-      render :new
+      render :new, alert: "Could Not Create Workout!"
     end
   end
 

@@ -16,7 +16,7 @@ class ExerciseLogsController < ApplicationController
         format.html { redirect_to programs_path, notice: "Exercise Completed!" }
         format.js   { render :create_success }
       else
-        format.html { render "exercises/index" }
+        format.html { render "exercises/index", alert: "Could Not Complete!" }
         format.js   { render :create_failure }
       end
     end
