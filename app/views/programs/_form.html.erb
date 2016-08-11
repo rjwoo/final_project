@@ -1,4 +1,5 @@
 <div class="istok-web">
+  <%= @program.errors.full_messages.join(", ") %>
   <%= form_for @program do |f| %>
     <%= f.text_field :title, class: "title", placeholder: "Title" %>
 

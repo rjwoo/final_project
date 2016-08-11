@@ -83,7 +83,7 @@ input {
 h2 {
     margin-bottom: 20px;
     font-weight: bold;
-    color: #ABABAB;
+    color: #282c3c;
 }
 
 .btn {
@@ -192,6 +192,10 @@ body > div.container > div > div.add-button > button {
   margin-left: 30%;
 }
 
+#program-show > div > button {
+  background-color: white;
+}
+
 // EXERCISES
 
 .exercise-container {
@@ -216,12 +220,16 @@ body > div.program-container > h2 {
   padding-right: 100px;
 }
 
+#program {
+  margin-bottom: 0px;
+}
+
 .start {
   float: right;
 }
 
 .istok-web-show {
-  font-family: 'Istok Web', sans-serif;
+  font-family: 'Arimo', sans-serif;
   color: #282c3c;
 }
 
@@ -229,6 +237,22 @@ body > div.program-container > h2 {
   font-family: 'Arimo', sans-serif;
   color: #80bfd8;
 }
+
+#choose-graph {
+  text-align: center;
+}
+
+.graph-container {
+  border: 5px solid #80bfd8;
+  border-radius: 5px;
+  margin-bottom: 25px;
+  margin-top: 25px;
+  padding: 10px 20px 10px 20px;
+}
+
+// #program-show > div > h2 > span > a {
+//   linear-gradient: (#282C45, #282C3C);
+// }
 
 // CSS BUTTONS
 
@@ -983,20 +1007,20 @@ body > div.program-container > h2 {
 */
 .button-raised.button-primary {
   border-color: #088ef0;
-  background: -webkit-gradient(linear, left top, left bottom, from(#34a5f8), to(#088ef0));
-  background: linear-gradient(#34a5f8, #088ef0); }
+  background: -webkit-gradient(linear, left top, left bottom, from(#80bfd8), to(#80bfd8));
+  background: linear-gradient(#282c3c, #282c3c); }
   .button-raised.button-primary:hover, .button-raised.button-primary:focus {
-    background: -webkit-gradient(linear, left top, left bottom, from(#42abf8), to(#0888e6));
-    background: linear-gradient(top, #42abf8, #0888e6); }
+    background: -webkit-gradient(linear, left top, left bottom, from(#80bfd8), to(#80bfd8));
+    background: linear-gradient(top, #80bfd8, #80bfd8); }
   .button-raised.button-primary:active, .button-raised.button-primary.active, .button-raised.button-primary.is-active {
-    border-color: #0880d7;
+    border-color: #80bfd8;
     background: #2798eb; }
 .button-raised.button-plain {
   border-color: #f2f2f2;
-  background: -webkit-gradient(linear, left top, left bottom, from(white), to(#f2f2f2));
-  background: linear-gradient(white, #f2f2f2); }
+  background: -webkit-gradient(linear, left top, left bottom, from(#80bfd8), to(#80bfd8));
+  background: linear-gradient(#80bfd8, #80bfd8); }
   .button-raised.button-plain:hover, .button-raised.button-plain:focus {
-    background: -webkit-gradient(linear, left top, left bottom, from(white), to(#ededed));
+    background: -webkit-gradient(linear, left top, left bottom, from(#80bfd8), to(#80bfd8));
     background: linear-gradient(top, white, #ededed); }
   .button-raised.button-plain:active, .button-raised.button-plain.active, .button-raised.button-plain.is-active {
     border-color: #e6e6e6;

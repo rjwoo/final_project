@@ -1,42 +1,46 @@
 <div id="program-show">
   <div class="istok-web-show">
-    <h1><%= @program.title %><span class="start"><%= link_to "Start a Workout", program_exercises_path(@program, @exercises) %></span></h1>
+    <h2 id="program"><%= @program.title %><span class="start"><%= link_to "Start a Workout", program_exercises_path(@program, @exercises), class: "button button-glow button-rounded button-raised button-primary"%></span></h2>
 
-    <button class="button button-primary button-circle button-small"><a href="<%= new_program_exercise_path(@program) %>"<i class="fa fa-plus"></i></a></button>
 
-       <%= link_to "Delete Entire Workout", @program, method: :delete, data: {confirm: "Are you sure?"} %>
-    </p>
-
+      <button class="button button-primary button-circle button-small"><a href="<%= new_program_exercise_path(@program) %>"<i class="fa fa-plus"></i></a></button>
+      <%= link_to "", @program, method: :delete, class: "fa fa-trash-o", data: {confirm: "Are you sure?"} %>
     <hr>
 
-    <%= link_to "Progress by Weight", graph: :weight %>
-    <%= link_to "Progress by Volume", graph: :volume %>
+    <div id="choose-graph">
+      <h4><%= link_to "Progress by Weight", class: "btn btn-xs btn-info", graph: :weight %> /
+      <%= link_to "Progress by Volume", class: "btn btn-xs btn-info", graph: :volume %></h4>
+    </div>
+
+
     <% @exercises = @program.exercises %>
     <% @exercises.each do |exercise| %>
-      <h3><%= exercise.exercise_option.name %></h3>
+      <div class="graph-container">
+        <h3><%= exercise.exercise_option.name %></h3>
 
 
-      <% if params[:graph] == "weight" %>
-        <%= render "weight", id: exercise.id %>
-      <% else %>
-        <%= render "volume", id: exercise.id %>
-      <% end %>
+        <% if params[:graph] == "weight" %>
+          <%= render "weight", id: exercise.id %>
+        <% else %>
+          <%= render "volume", id: exercise.id %>
+        <% end %>
 
-      <div id="weight<%= dom_id(exercise) %>" value="<%= exercise.weight_lifted %>"></div>
-      <div id="volume<%= dom_id(exercise) %>" value="<%= exercise.volume_lifted %>"></div>
-      <div id="date<%= dom_id(exercise) %>" value="<%= exercise.exercise_date %>"></div>
+        <div id="weight<%= dom_id(exercise) %>" value="<%= exercise.weight_lifted %>"></div>
+        <div id="volume<%= dom_id(exercise) %>" value="<%= exercise.volume_lifted %>"></div>
+        <div id="date<%= dom_id(exercise) %>" value="<%= exercise.exercise_date %>"></div>
 
-      <div class="graphContent">
-        <canvas id="myChart<%= dom_id(exercise) %>" width="200" height="55"></canvas>
+        <div class="graphContent">
+          <canvas id="myChart<%= dom_id(exercise) %>" width="200" height="55"></canvas>
 
-        <div class="weight" id="<%= dom_id(exercise) %>">
-          <%#= render "weight", id: exercise.id %>
+          <div class="weight" id="<%= dom_id(exercise) %>">
+            <%#= render "weight", id: exercise.id %>
+          </div>
+
+          <div class="volume" id="<%= dom_id(exercise) %>">
+            <%#= render "volume", id: exercise.id %>
+          </div>
+
         </div>
-
-        <div class="volume" id="<%= dom_id(exercise) %>">
-          <%#= render "volume", id: exercise.id %>
-        </div>
-
       </div>
 
     <% end %>
