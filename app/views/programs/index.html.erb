@@ -1,18 +1,14 @@
 <div class="program-container">
+  <h2 class="index-header">Your Workout Days</h2>
+  <div class="add-button" style="bottom: 40px; text-align: center; "><button class="button button-royal button-circle button-giant"><a href="http://localhost:3000/programs/new"><i class="fa fa-plus"></i></a></button></div>
 
-  <h2 class="index-header">Your Programs</h2>
-
-
-
-  <% @programs.each do |program| %>
-    <div class="day">
-      <div class="istok-web">
-        <h2><%= link_to program.title, program_path(program) %></h2></button>
+  <div id="program-index-right">
+    <% @programs.each do |program| %>
+      <div class="day">
+        <div class="arimo">
+          <h2><%= link_to program.title, program_path(program) %></h2></button>
+        </div>
       </div>
-    </div>
-  <% end %>
-  <div class="add-button" style="text-align: center"><button class="button button-royal button-circle button-giant"><a href="http://localhost:3000/programs/new"><i class="fa fa-plus"></i></a></button></div>
-
-
-
+    <% end %>
+  </div>
 </div>

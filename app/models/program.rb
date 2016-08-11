@@ -1,7 +1,7 @@
 class Program < ActiveRecord::Base
   has_many :exercises, dependent: :destroy
 
-  validates :title, presence: true, uniqueness: true
+  belongs_to :users
 
-  
+  validates :title, presence: true, uniqueness: true
 end

@@ -13,12 +13,12 @@ body {
   padding-top: 0px;
   padding-bottom: 0px;
   font-size: 18px;
-  color: white;
+  color: #80bfd8;
 }
 
 .header {
   text-align: center;
-  font-family: 'Black Ops One', cursive;
+  font-family: 'Raleway', sans-serif;
   color: #282c3c;
 }
 
@@ -75,7 +75,7 @@ input {
     width: 100%;
     margin-bottom: 17px;
     padding: 15px;
-    background-color: #ECF4F4;
+    background-color: #80bfd8;
     border-radius: 2px;
     border: none;
 }
@@ -131,13 +131,20 @@ body > div.program-container > h2 {
 
 .index-header {
   text-align: center;
-  font-family: 'Black Ops One', cursive;
-  color: #80bfd8;
+  font-family: 'Raleway', sans-serif;
+  color: #282C3C;
   padding-bottom: 50px;
+  font-size: 60px;
 }
 
 .day {
   text-align: center;
+  margin-top: 55px;
+}
+
+#program-index-right {
+  float: right;
+  margin-right: 30%;
 }
 
 body > div.program-container > div.add-button > button {
@@ -171,11 +178,18 @@ body > div.program-container > h1 {
   padding-top: 0px;
   padding-bottom: 0px;
   font-weight: 700;
-  color: black;
+  color: #80bfd8;
 }
 
 body > div.program-container > div.add-button > button {
   background-color: black;
+}
+
+body > div.container > div > div.add-button > button {
+  background-color: #282C3C;
+  float: left;
+  margin-top: 95px;
+  margin-left: 30%;
 }
 
 // EXERCISES
@@ -189,7 +203,7 @@ body > div.program-container > div.add-button > button {
   padding-top: 0px;
   padding-bottom: 0px;
   font-weight: 700;
-  color: black;
+  color: #80bfd8;
 }
 
 body > div.program-container > h2 {
@@ -209,6 +223,11 @@ body > div.program-container > h2 {
 .istok-web-show {
   font-family: 'Istok Web', sans-serif;
   color: #282c3c;
+}
+
+.arimo {
+  font-family: 'Arimo', sans-serif;
+  color: #80bfd8;
 }
 
 // CSS BUTTONS
@@ -489,14 +508,14 @@ body > div.program-container > h2 {
   .button-action:hover, .button-action:focus,
   .button-action-flat:hover,
   .button-action-flat:focus {
-    background-color: #b9e563;
+    background-color: black;
     border-color: #b9e563;
     color: white; }
   .button-action:active, .button-action.active, .button-action.is-active,
   .button-action-flat:active,
   .button-action-flat.active,
   .button-action-flat.is-active {
-    background-color: #a1d243;
+    background-color: #80bfd8;
     border-color: #a1d243;
     color: #8bc220; }
 

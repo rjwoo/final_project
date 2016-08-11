@@ -1,6 +1,6 @@
 <div id="program-show">
   <div class="istok-web-show">
-    <h1><%= @program.title %><span class="start"><%= link_to "Start Workout", program_exercises_path(@program, @exercises) %></span></h1>
+    <h1><%= @program.title %><span class="start"><%= link_to "Start a Workout", program_exercises_path(@program, @exercises) %></span></h1>
 
     <button class="button button-primary button-circle button-small"><a href="<%= new_program_exercise_path(@program) %>"<i class="fa fa-plus"></i></a></button>
 
@@ -9,12 +9,12 @@
 
     <hr>
 
+    <%= link_to "Progress by Weight", graph: :weight %>
+    <%= link_to "Progress by Volume", graph: :volume %>
     <% @exercises = @program.exercises %>
     <% @exercises.each do |exercise| %>
       <h3><%= exercise.exercise_option.name %></h3>
 
-      <%= link_to "Progress by Weight", graph: :weight %>
-      <%= link_to "Progress by Volume", graph: :volume %>
 
       <% if params[:graph] == "weight" %>
         <%= render "weight", id: exercise.id %>
