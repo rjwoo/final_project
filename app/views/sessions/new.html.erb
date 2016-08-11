@@ -1,18 +1,21 @@
-<div id="background-image">
-  <div class="container">
-    <div class="row colored">
-      <div id="contentdiv" class="contcustom">
-        <span><img src="/assets/weightlifting.png"</span>
-        <h2 class="header">LOGIN</h2>
-        <div class="istok-web">
-          <%= form_tag(sessions_path) do %>
-            <%= email_field_tag :email, nil, class: "username", placeholder: "Email" %>
-            <%= password_field_tag :password, nil, class: "password", placeholder: "Password" %>
-            <div>
-              <%= submit_tag "Sign In", class: "button btn btn-default wide" %>
-            </div>
-          <% end %>
-        </div>
+
+<div id="left">
+
+</div>
+
+<div id="right">
+  <div class="row colored">
+    <div id="contentdiv" class="contcustom">
+      <span><img src="/assets/weightlifting.png"</span>
+      <h2 class="header">LOGIN</h2>
+      <div class="istok-web">
+        <%= form_tag(sessions_path) do %>
+          <%= email_field_tag :email, nil, class: "username", placeholder: "Email" %>
+          <%= password_field_tag :password, nil, class: "password", placeholder: "Password" %>
+          <div>
+            <%= submit_tag "Sign In", class: "button btn btn-default wide" %>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>

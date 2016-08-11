@@ -6,27 +6,24 @@ html {
 }
 
 body {
-  background-color: black;
   padding-top: 60px;
 }
 
 #contentdiv > span > div > form > div > input {
   padding-top: 0px;
   padding-bottom: 0px;
+  font-size: 18px;
+  color: white;
 }
 
 .header {
   text-align: center;
   font-family: 'Black Ops One', cursive;
-  color: #80bfd8;
+  color: #282c3c;
 }
 
 .istok-web {
   font-family: 'Istok Web', sans-serif;
-}
-
-#contentdiv > span > div > form > div > input {
-  font-size: 18px;
 }
 
 // NAVBAR
@@ -107,7 +104,7 @@ h2 {
 }
 
 .wide {
-    background-color: #8EB7E4;
+    background-color: #282C3C;
     width: 100%;
     -webkit-border-top-right-radius: 0;
     -webkit-border-bottom-right-radius: 0;
@@ -196,11 +193,31 @@ body > div.program-container > div.add-button > button {
 }
 
 body > div.program-container > h2 {
-  margin-bottom: 85px;
+  margin-bottom: 0px;
 }
 
+// PROGRAM SHOW
+#program-show {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.start {
+  float: right;
+}
+
+.istok-web-show {
+  font-family: 'Istok Web', sans-serif;
+  color: #282c3c;
+}
 
 // CSS BUTTONS
+
+// BACKGROUND
+
+
+
+
 
 
 // BUTTONS
