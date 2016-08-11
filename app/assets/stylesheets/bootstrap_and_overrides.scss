@@ -27,9 +27,19 @@ body {
 }
 
 // NAVBAR
-.navbar {
-  margin-top: 0px;
-  margin-bottom: 0px;
+body > div.navbar > div {
+  background-color: white;
+  border-color: white;
+}
+
+.navbar-nav {
+  width: 100%;
+  text-align: center;
+}
+
+body > div.navbar > div > ul > li {
+  float: none;
+  display: inline-block;
 }
 
 // FORMS
@@ -147,8 +157,12 @@ body > div.program-container > h2 {
   margin-right: 30%;
 }
 
+.left {
+  float: left;
+}
+
 body > div.program-container > div.add-button > button {
-  margin-top: 75px;
+  margin-top: 70px;
 }
 
 body > div.program-container > button > a {
@@ -188,7 +202,7 @@ body > div.program-container > div.add-button > button {
 body > div.container > div > div.add-button > button {
   background-color: #282C3C;
   float: left;
-  margin-top: 95px;
+  margin-top: 8%;
   margin-left: 30%;
 }
 
@@ -268,11 +282,19 @@ body > div.program-container > h2 {
 }
 
 a img {
-display: block;
-margin: 0 auto;
-border: none;
-bottom: 10px;
+  display: block;
+  margin: 0 auto;
+  border: none;
+  bottom: 10px;
 }
+
+.fa-list-ul {
+  padding: 20px 0 20px 0;
+  font-size: 30px;
+}
+
+
+
 
 // #program-show > div > h2 > span > a {
 //   linear-gradient: (#282C45, #282C3C);

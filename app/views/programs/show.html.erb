@@ -3,8 +3,8 @@
     <h2 id="program"><%= @program.title %><span class="start"><%= link_to "Start a Workout", program_exercises_path(@program, @exercises), class: "button button-glow button-rounded button-raised button-primary"%></span></h2>
 
 
-      <button class="button button-primary button-circle button-small"><a href="<%= new_program_exercise_path(@program) %>"<i class="fa fa-plus"></i></a></button>
-      <%= link_to "", @program, method: :delete, class: "fa fa-trash-o", data: {confirm: "Are you sure?"} %>
+    <button class="button button-primary button-circle button-small"><a href="<%= new_program_exercise_path(@program) %>"<i class="fa fa-plus"></i></a></button>
+    <%= link_to "", @program, method: :delete, class: "fa fa-trash-o", data: {confirm: "Are you sure?"} %>
     <hr>
 
     <div id="choose-graph">
