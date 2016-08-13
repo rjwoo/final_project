@@ -13,13 +13,33 @@ body {
   padding-top: 0px;
   padding-bottom: 0px;
   font-size: 18px;
-  color: white;
+  color: #80bfd8;
 }
 
 .header {
   text-align: center;
-  font-family: 'Black Ops One', cursive;
+  font-family: 'Raleway', sans-serif;
   color: #282c3c;
+}
+.header-login {
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  color: white;
+}
+
+#left > h1 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  color: white;
+  font-size: 50px;
+  text-align: left;
+  padding-left: 30px;
+}
+
+#left {
+  margin-left: 40px;
+  margin-right: -40px;
+  margin-top: 120px;
 }
 
 .istok-web {
@@ -27,9 +47,19 @@ body {
 }
 
 // NAVBAR
-.navbar {
-  margin-top: 0px;
-  margin-bottom: 0px;
+body > div.navbar > div {
+  background-color: white;
+  border-color: white;
+}
+
+.navbar-nav {
+  width: 100%;
+  text-align: center;
+}
+
+body > div.navbar > div > ul > li {
+  float: none;
+  display: inline-block;
 }
 
 // FORMS
@@ -75,7 +105,7 @@ input {
     width: 100%;
     margin-bottom: 17px;
     padding: 15px;
-    background-color: #ECF4F4;
+    background-color: #80bfd8;
     border-radius: 2px;
     border: none;
 }
@@ -83,11 +113,12 @@ input {
 h2 {
     margin-bottom: 20px;
     font-weight: bold;
-    color: #ABABAB;
+    color: #282c3c;
 }
 
 .btn {
     border-radius: 2px;
+    padding: 10px;
     padding: 10px;
 }
 
@@ -131,17 +162,28 @@ body > div.program-container > h2 {
 
 .index-header {
   text-align: center;
-  font-family: 'Black Ops One', cursive;
-  color: #80bfd8;
+  font-family: 'Raleway', sans-serif;
+  color: #282C3C;
   padding-bottom: 50px;
+  font-size: 60px;
 }
 
 .day {
   text-align: center;
+  margin-top: 55px;
+}
+
+#program-index-right {
+  float: right;
+  margin-right: 30%;
+}
+
+.left {
+  float: left;
 }
 
 body > div.program-container > div.add-button > button {
-  margin-top: 75px;
+  margin-top: 70px;
 }
 
 body > div.program-container > button > a {
@@ -171,11 +213,22 @@ body > div.program-container > h1 {
   padding-top: 0px;
   padding-bottom: 0px;
   font-weight: 700;
-  color: black;
+  color: #80bfd8;
 }
 
 body > div.program-container > div.add-button > button {
   background-color: black;
+}
+
+body > div.container > div > div.add-button > button {
+  background-color: #282C3C;
+  float: left;
+  margin-top: 8%;
+  margin-left: 30%;
+}
+
+#program-show > div > button {
+  background-color: white;
 }
 
 // EXERCISES
@@ -189,7 +242,7 @@ body > div.program-container > div.add-button > button {
   padding-top: 0px;
   padding-bottom: 0px;
   font-weight: 700;
-  color: black;
+  color: #80bfd8;
 }
 
 body > div.program-container > h2 {
@@ -202,14 +255,97 @@ body > div.program-container > h2 {
   padding-right: 100px;
 }
 
+#program {
+  margin-bottom: 0px;
+}
+
 .start {
   float: right;
 }
 
 .istok-web-show {
-  font-family: 'Istok Web', sans-serif;
+  font-family: 'Arimo', sans-serif;
   color: #282c3c;
 }
+
+.arimo {
+  font-family: 'Arimo', sans-serif;
+  color: #80bfd8;
+}
+
+.description {
+  font-family: 'Arimo', sans-serif;
+  color: white;
+  text-align: left;
+  padding-left: 30px;
+  padding-right: 90px;
+  font-size: 16px;
+}
+
+#choose-graph {
+  text-align: center;
+}
+
+.graph-container {
+  border: 5px solid #80bfd8;
+  border-radius: 5px;
+  margin-bottom: 25px;
+  margin-top: 25px;
+  padding: 10px 20px 10px 20px;
+}
+
+#form-text > input {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  font-weight: 700;
+  color: #80bfd8;
+}
+
+#finish {
+  width: 200px;
+  margin: auto;
+  display: block;
+}
+
+#finish > a {
+  align-items: center;
+}
+
+a img {
+  display: block;
+  margin: 0 auto;
+  border: none;
+  bottom: 10px;
+}
+
+.fa-list-ul {
+  padding: 20px 0 20px 0;
+  font-size: 30px;
+}
+
+body > div.navbar > div > ul > li > a {
+  font-size: 30px;
+}
+
+.sign-up {
+  margin-top: 15px;
+}
+
+.login-img {
+  width: 100%;
+}
+
+body > div.navbar > div > ul > li.dropdown > a {
+  padding-left: 250px
+}
+
+.session-img {
+  background: url("login-img.jpg");
+}
+
+// #program-show > div > h2 > span > a {
+//   linear-gradient: (#282C45, #282C3C);
+// }
 
 // CSS BUTTONS
 
@@ -489,14 +625,14 @@ body > div.program-container > h2 {
   .button-action:hover, .button-action:focus,
   .button-action-flat:hover,
   .button-action-flat:focus {
-    background-color: #b9e563;
+    background-color: black;
     border-color: #b9e563;
     color: white; }
   .button-action:active, .button-action.active, .button-action.is-active,
   .button-action-flat:active,
   .button-action-flat.active,
   .button-action-flat.is-active {
-    background-color: #a1d243;
+    background-color: #80bfd8;
     border-color: #a1d243;
     color: #8bc220; }
 
@@ -617,7 +753,7 @@ body > div.program-container > h2 {
   .button-circle.button-giant,
   .button-box.button-giant,
   .button-square.button-giant {
-    width: 70px; }
+    width: 90px; }
   .button-circle.button-jumbo,
   .button-box.button-jumbo,
   .button-square.button-jumbo {
@@ -964,20 +1100,20 @@ body > div.program-container > h2 {
 */
 .button-raised.button-primary {
   border-color: #088ef0;
-  background: -webkit-gradient(linear, left top, left bottom, from(#34a5f8), to(#088ef0));
-  background: linear-gradient(#34a5f8, #088ef0); }
+  background: -webkit-gradient(linear, left top, left bottom, from(#80bfd8), to(#80bfd8));
+  background: linear-gradient(#282c3c, #282c3c); }
   .button-raised.button-primary:hover, .button-raised.button-primary:focus {
-    background: -webkit-gradient(linear, left top, left bottom, from(#42abf8), to(#0888e6));
-    background: linear-gradient(top, #42abf8, #0888e6); }
+    background: -webkit-gradient(linear, left top, left bottom, from(#80bfd8), to(#80bfd8));
+    background: linear-gradient(top, #80bfd8, #80bfd8); }
   .button-raised.button-primary:active, .button-raised.button-primary.active, .button-raised.button-primary.is-active {
-    border-color: #0880d7;
-    background: #2798eb; }
+    border-color: #80bfd8;
+    background: #282c3c; }
 .button-raised.button-plain {
   border-color: #f2f2f2;
-  background: -webkit-gradient(linear, left top, left bottom, from(white), to(#f2f2f2));
-  background: linear-gradient(white, #f2f2f2); }
+  background: -webkit-gradient(linear, left top, left bottom, from(#80bfd8), to(#80bfd8));
+  background: linear-gradient(#80bfd8, #80bfd8); }
   .button-raised.button-plain:hover, .button-raised.button-plain:focus {
-    background: -webkit-gradient(linear, left top, left bottom, from(white), to(#ededed));
+    background: -webkit-gradient(linear, left top, left bottom, from(#80bfd8), to(#80bfd8));
     background: linear-gradient(top, white, #ededed); }
   .button-raised.button-plain:active, .button-raised.button-plain.active, .button-raised.button-plain.is-active {
     border-color: #e6e6e6;
@@ -1732,8 +1868,8 @@ body > div.program-container > h2 {
 * (ex. .button-large, .button-small, etc.)
 */
 .button-giant {
-  font-size: 28px;
-  height: 70px;
+  font-size: 45px;
+  height: 90px;
   line-height: 70px;
   padding: 0 70px; }
 

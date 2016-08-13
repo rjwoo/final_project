@@ -11,9 +11,9 @@ class ExercisesController < ApplicationController
     @exercise = Exercise.new exercise_params
     @exercise.program = @program
     if @exercise.save
-      redirect_to program_path(@program)
+      redirect_to program_path(@program), notice: "Exercise Added!"
     else
-      render :new
+      render :new, alert: "Could Not Add Exercise!"
     end
   end
 

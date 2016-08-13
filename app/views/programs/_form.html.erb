@@ -1,9 +1,10 @@
 <div class="istok-web">
+  <%= @program.errors.full_messages.join(", ") %>
   <%= form_for @program do |f| %>
     <%= f.text_field :title, class: "title", placeholder: "Title" %>
 
     <div class="sign">
-      <%= f.submit "Create New Program", class: "button btn btn-default wide" %>
+      <%= f.submit "Create New Workout", class: "button btn btn-default wide" %>
     </div>
   <% end %>
 </div>

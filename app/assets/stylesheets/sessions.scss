@@ -48,7 +48,7 @@ input {
 h2 {
     margin-bottom: 20px;
     font-weight: bold;
-    color: #ABABAB;
+    color: #282c3c;
 }
 
 .btn {
@@ -81,13 +81,14 @@ h2 {
 
 #contentdiv > span > div > form > div > input {
   font-weight: 700;
-  color: white;
+  color: #80bfd8;
 }
 
 #right {
   float: right;
 }
 
-//  {
-//   background-image: url('/assets/oly_bar.jpg');
-// }
+#left {
+  float:left;
+  z-index: 0;
+}

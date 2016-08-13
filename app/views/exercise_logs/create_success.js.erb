@@ -1,2 +1,2 @@
 <% program = @exercise.program %>
-$("#<%= dom_id(program) %>-<%= dom_id(@exercise) %>").html('<%= j render "exercises/completed" %>');
+$("#<%= dom_id(program) %>-<%= dom_id(@exercise) %>").html('<%= j render "exercises/completed" %>').fadeOut(3000);
