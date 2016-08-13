@@ -16,8 +16,6 @@
       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></li>
     <!-- <span class="glyphicon glyphicon-user"></span> -->
 
-    
-
     <% if user_signed_in? %>
     <li class="nav-item"><%= link_to "Logout", sessions_path, class: "links", method: :delete, data: {confirm: "Are you sure you want to log out?"} %></li>
     <% else %>

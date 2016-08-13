@@ -1,8 +1,6 @@
 <div id="program-show">
   <div class="istok-web-show">
     <h2 id="program"><%= @program.title %><span class="start"><%= link_to "Start a Workout", program_exercises_path(@program, @exercises), class: "button button-glow button-rounded button-raised button-primary"%></span></h2>
-
-
     <button class="button button-primary button-circle button-small"><a href="<%= new_program_exercise_path(@program) %>"<i class="fa fa-plus"></i></a></button>
     <%= link_to "", @program, method: :delete, class: "fa fa-trash-o", data: {confirm: "Are you sure?"} %>
     <hr>
@@ -12,12 +10,10 @@
       <%= link_to "Progress by Volume", class: "btn btn-xs btn-info", graph: :volume %></h4>
     </div>
 
-
     <% @exercises = @program.exercises %>
     <% @exercises.each do |exercise| %>
       <div class="graph-container">
         <h3><%= exercise.exercise_option.name %></h3>
-
 
         <% if params[:graph] == "weight" %>
           <%= render "weight", id: exercise.id %>
@@ -39,11 +35,8 @@
           <div class="volume" id="<%= dom_id(exercise) %>">
             <%#= render "volume", id: exercise.id %>
           </div>
-
         </div>
       </div>
-
     <% end %>
-
   </div>
 </div>
