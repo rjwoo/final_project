@@ -29,7 +29,7 @@ gem 'simple_form'
 gem "font-awesome-rails"
 gem "rails-erd"
 gem 'chart-js-rails'
-
+gem 'rails_12factor', group: :production
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
