@@ -1,6 +1,11 @@
 <div class="program-container">
+
   <h2 class="index-header">Your Workout Days</h2>
-  <div class="add-button" style="bottom: 35px; text-align: center; "><button class="button button-royal button-circle button-giant"><a href="http://localhost:3000/programs/new"><i class="fa fa-plus"></i></a></button></div>
+  <div class="add-button">
+    <%= link_to new_program_path, class: "button button-royal button-circle button-giant" do %>
+      <span class="fa fa-plus" style="padding-top: 25%;"></span>
+    <% end %>
+  </div>
 
   <div id="program-index-right">
     <% @programs.each do |program| %>
