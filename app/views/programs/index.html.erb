@@ -8,12 +8,15 @@
   </div>
 
   <div id="program-index-right">
-    <% @programs.each do |program| %>
-      <div class="day">
-        <div class="arimo">
-          <h2><%= link_to program.title, program_path(program) %></h2></button>
+    <% if user_signed_in? %>
+      <% @programs.each do |program| %>
+        <div class="day">
+          <div class="arimo">
+            <h2><%= link_to program.title, program_path(program) %></h2>
+          </div>
         </div>
-      </div>
+      <% end %>
     <% end %>
+
   </div>
 </div>
