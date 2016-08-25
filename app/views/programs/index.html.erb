@@ -1,22 +1,22 @@
 <div class="program-container">
 
-  <h2 class="index-header">Your Workout Days</h2>
-  <div class="add-button">
-    <%= link_to new_program_path, class: "button button-royal button-circle button-giant" do %>
-      <span class="fa fa-plus" style="padding-top: 25%;"></span>
-    <% end %>
-  </div>
-
-  <div id="program-index-right">
-    <% if user_signed_in? %>
-      <% @programs.each do |program| %>
-        <div class="day">
-          <div class="arimo">
-            <h2><%= link_to program.title, program_path(program) %></h2>
-          </div>
-        </div>
+    <h2 class="index-header">Your Workout Days</h2>
+    <div class="add-button">
+      <%= link_to new_program_path, class: "button button-royal button-circle button-giant" do %>
+        <span class="fa fa-plus" style="padding-top: 25%;"></span>
       <% end %>
-    <% end %>
+    </div>
 
-  </div>
+    <div id="program-index-right">
+      <% if user_signed_in? %>
+        <% @programs.each do |program| %>
+          <div class="day">
+            <div class="arimo">
+              <h2><%= link_to program.title, program_path(program) %></h2>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+
 </div>

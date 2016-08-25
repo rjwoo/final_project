@@ -9,6 +9,7 @@ class ProgramsController < ApplicationController
 
   def create
     @program = Program.new program_params
+    @program.user_id = current_user.id
     if @program.save
       redirect_to program_path(@program), notice: "Successfully Created New Workout"
     else
@@ -17,7 +18,7 @@ class ProgramsController < ApplicationController
   end
 
   def index
-    @programs = Program.all
+    @programs = current_user.programs
   end
 
   def show
